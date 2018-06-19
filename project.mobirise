@@ -1,0 +1,154 @@
+{
+  "settings": {
+    "name": "FAQ",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [],
+    "versionFirst": "4.7.6",
+    "uniqCompNum": 8,
+    "versionPublish": "4.7.7",
+    "favicon": "@PROJECT_PATH@/assets/images/nye-logo-animated.gif",
+    "noImageResize": ""
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "p": {
+              "color": "#767676"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            ".accordion-content": {
+              "flex-basis": "100%",
+              "-webkit-flex-basis": "100%"
+            },
+            ".panel-group": {
+              "width": "100%"
+            },
+            ".card": {
+              "border-radius": "0px",
+              "margin-bottom": "-1px",
+              ".card-header": {
+                "border-radius": "0px",
+                "border": "0px",
+                "padding": "0",
+                "a.panel-title": {
+                  "margin-bottom": "0",
+                  "font-style": "normal",
+                  "font-weight": "500",
+                  "display": "block",
+                  "text-decoration": "none !important",
+                  "margin-top": "-1px",
+                  "line-height": "normal",
+                  "&:focus": {
+                    "text-decoration": "none !important"
+                  },
+                  "h4": {
+                    "padding": "1.3rem 2rem",
+                    "border": "1px solid #dfdfdf",
+                    "margin-bottom": "0",
+                    ".sign": {
+                      "padding-right": "1rem"
+                    }
+                  }
+                }
+              }
+            },
+            ".mbr-figure": {
+              "-webkit-align-self": "flex-start",
+              "align-self": "flex-start",
+              "padding-left": "4rem",
+              "& when (@reverseContent)": {
+                "padding-left": "0",
+                "padding-right": "4rem"
+              }
+            },
+            ".media-container-row": {
+              "& when (@reverseContent)": {
+                "-webkit-flex-direction": "row-reverse",
+                "flex-direction": "row-reverse"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".media-container-row": {
+                "& when (@reverseContent)": {
+                  "-webkit-flex-direction": "column-reverse",
+                  "flex-direction": "column-reverse"
+                }
+              },
+              ".mbr-figure": {
+                "padding-right": "0",
+                "padding-left": "0",
+                "padding-top": "2rem",
+                "& when (@reverseContent)": {
+                  "padding-top": "0",
+                  "padding-bottom": "2rem"
+                }
+              }
+            },
+            ".panel-text": {
+              "color": "#232323"
+            },
+            "SPAN": {
+              "color": "#232323"
+            }
+          },
+          "_name": "accordion2",
+          "_customHTML": "<section class=\"accordion2\" group=\"Accordion & Toggles & Tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        \n        <input type=\"checkbox\" title=\"Media on Right/Left\" name=\"reverseContent\" checked>\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"20\" max=\"200\" step=\"1\" value=\"64\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <select title=\"Accordions Count\" name=\"bootstrapAccordion\">\n             <option value=\"1\">1</option>\n             <option value=\"2\">2</option>\n             <option value=\"3\">3</option>\n             <option value=\"4\">4</option>\n             <option value=\"5\">5</option>\n             <option value=\"6\" selected>6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/nye-3-800x450.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#f9f9f9\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row pt-5\">\n            <div class=\"accordion-content\">\n                <h2 class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"><b>BallDrop.com</b><br><b>&amp;</b><br><b>NYE.com</b><br><b>FAQ</b></h2>\n                <h3 class=\"mbr-section-subtitle pt-2 align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n                    tempor incididunt ut labore et dolore magna aliqua.\n                </h3>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion pt-5 mt-3\" role=\"tablist\" aria-multiselectable=\"true\">\n                        <div class=\"card\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                    <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>&nbsp;About BallDrop.com &amp; NYE.com</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                       We sell tickets to New Year's Eve parties in Times Square with guaranteed views of the ball drop directly from the venue, as well as tickets to parties in the Times Square viewing area that have a history of letting guests exit to see the ball drop and then re-enter the party. We also sell passes that give you access to parties at multiple venues in Times Square, which is fun because it lets you move around the area and to various parties. And we sell tickets to other fun New Yera's Eve parties that are not in the Times Square area, including a number of cruises. We have parties that are for adults age 21 and up, and parties that welcome all ages.</p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                    <h4 class=\"mbr-fonts-style mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>&nbsp;About the Times Square New Year's Eve Ball Drop Celebrations</h4>\n                                </a>\n                                \n                            </div>\n                            <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">To come to Times Square to see the ball drop is free and does not require tickets, but you may need to arrive extremely early (sometimes as early as the night before) and be willing to stand out in the cold for many hours without access to bathrooms or seating. Alternatively, we sell tickets for parties in Times Square that will allow you to enter the Times Square area much later (as late as 8pm on NYE) and give you access to area parties that will have food, drinks, and music leading up to the ball drop at midnight.<br><br>The Times Square New Year's Eve Ball descends from a flagpole at the top of One Times Square, which is located at 7th Ave, between 42nd St &amp; 43rd St. It can be seen along Broadway, from 41st St to 50th St, and along 7th Ave, as far north as 59th St.</p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                    <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>&nbsp;Street Closures</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">The New York Police Department will be closing down access to Times Square from 40th St to 59th St &amp; from 6th Ave to 8th Ave. The exact times that these blocks close will depend on when people begin arriving, which is normally the night before, and the area is usually closed off entirely to non ticket holders by around noon on NYE.</p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                    <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>Ticket Types</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                       Here is info about our different ticket types:<br><br><i><b>Seated VIP</b></i> is available for singles or any size group, and gives you and your party seating together at a shared area with other guests. There is no bottle service with <i><b>Seated VIP</b></i> but you would still have access to the open bar included in the ticket price.<br><br><i><b>Ultra VIP</b></i> and <i><b>Platinum VIP</b></i> type tickets are available for purchase for groups of 4 or more people. These tickets will give you seating reserved for your group and includes bottle service in the ticket price. The number of bottles you will be provided is determined by your ticket type and group size.<br><br><i><b>Couples</b></i> tickets provide seating and bottle service for two, and the cost is per-couple not per-person.<br><br><i><b>General Admission</b></i> and <i><b>Access</b></i> tickets are standing room only and do not allow for seating.<br><br>(*Addional ticket types will be available for certain events. **Please look closely at all advertised details before purchase)</p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                    <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>Ticket Delivery Info / Receiving Tickets</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                       Various ticket delivery options are available depending on the event:<br><br><b>Email / E-Tickets:</b><br><b>[$5.95] Print-At-Home or Phone Scan</b><br>Certain of our parties, mostly outside of the Times Square area, offer tickets through email. Because of large crowds the New York Police Department will not let pedestrians into the Times Square area without our physical tickets that include security features. This is why we don't offer email tickets for most events.<br><br><b>Ticket Shipping:<br>[$19.95] Shipping within the US<br>[$49.95] International Shipping outside of the US</b><br>Tickets will ship during the first week of December via FedEx.<br>Because of chain of custody concerns we cannot deliver tickets to hotels or PO Boxes.<br><br><b>Ticket Pickup:</b><br><b>[$5.95] NYE Pop Up Store</b><br>Our NYE Pop Up Store is located in midtown Manhattan NYC and is open December 30th through 31st.<br>We recommend going to pick up your tickets on either the 30th, as December 31st will likely be more busy and have longer lines.<br>The exact address and hours of the NYE Pop Up Store will be announced in mid December.<br>For updated store hours and info visit: <i><a href=\"http://nyc.nye.com/Pickup\" target=\"_blank\">nyc.nye.com/Pickup</a></i><b><br></b><br></p>\n                                </div>\n                            </div>\n                        </div>\n                \n                        <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                            <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                                <a role=\"button\" class=\"collapsed panel-title text-black\" data-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                    <h4 class=\"mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                                        <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>&nbsp;Ticket Delivery Changes / Updates / Upgrades (Shipping or Pickup ONLY)</h4>\n                                </a>\n                            </div>\n                            <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n                                <div class=\"panel-body p-4\">\n                                    <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                       You can request to change your delivery method to either Shipping or Pickup.<br>You can authorize a third party to pickup your ticket order at our NYE Pop Up Store.<br>To request a change visit:&nbsp;<a href=\"http://nyc.nye.com/UpdateDelivery\" target=\"_blank\">nyc.nye.com/UpdateDelivery</a><br><br></p>\n                                </div>\n                            </div>\n                        </div>\n                </div>\n            </div>\n            <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                    <img src=\"@PROJECT_PATH@/assets/images/800x800-flyer-752x752.png\" alt=\"Mobirise\" title>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qVrrJcIz0u",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "accordion2-6"
+        }
+      ]
+    }
+  }
+}
